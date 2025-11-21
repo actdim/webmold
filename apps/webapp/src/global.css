@@ -1,8 +1,11 @@
 /*
-https://tailwindcss.com/docs/preflight
-important: use this command to build/watch css in parallel instead of building it directly during next build (which is very slow!) 
+important: use this command to build/watch css in parallel instead of building it directly during next build (which can be slow!) 
 npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
 */
+
+/* normalize is better */
+/* @import 'tailwindcss/preflight'; */
+@import 'normalize.css';
 
 @import 'tailwindcss';
 
@@ -15,42 +18,4 @@ npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
     /* square: false; */
 }
 
-/* 
-@layer theme, base, components, utilities;
-@import "./theme.css" layer(theme);
-@import "./preflight.css" layer(base);
-@import "./utilities.css" layer(utilities); 
-*/
-
 @tailwind utilities;
-
-:root {
-    /* 
-    @property --color-test {
-        syntax: "<color>";
-        inherits: false;
-        initial-value: white;
-    } 
-    */
-}
-
-@theme {
-    --color-primary: blue;
-}
-
-@layer components {
-}
-
-/* @utility ... {
-    @apply ...    
-    @variant ... {
-        
-    }
-} */
-
-/* @plugin 'tailwindcss-animate'; */
-
-/* @custom-variant dark (&:is(.dark *)); */
-
-@layer base {
-}

@@ -1,14 +1,73 @@
+@import './global.css';
+
+@property --alarm-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: red;
+}
+
+:root {
+}
+
+@theme {
+    --color-primary: blue; /*gives class bg-primary etc*/
+    --color-alarm: var(--alarm-color);
+    /* 
+    --color-
+    --font-
+    --text-
+    --font-weight-
+    --tracking-
+    --leading- 
+    --breakpoint-
+    --container-
+    --spacing-
+    --radius-
+    --shadow-
+    --inset-shadow-
+    --drop-shadow-
+    --blur-
+    --perspective-
+    --aspect-
+    --ease-
+    --animate-
+    */
+    --size-test: 10px;
+}
+
+@layer base {
+}
+
+@layer components {
+}
+
+/* gives class custom */
+/* theme */
+@utility custom {
+    /* background-color: green; */
+    @apply bg-green-500;
+}
+
+/* gives classes color-* */
+@utility color-* {
+    color: --value(--color-*);
+}
+
+/* custom vars: */
 /*
-https://tailwindcss.com/docs/preflight
-important: use this command to build/watch css in parallel instead of building it directly during next build (which is very slow!) 
-npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
+should work:
+`--color-*` (`text-red-500`, `bg-sky-300`)
+`--text-*` (`text-sm`, `text-xl`)
+`--font-weight-*` (`font-bold`)
+`--leading-*` (`leading-tight`)
+`--tracking-*` (`tracking-wide`)
+`--opacity-*` (`opacity-50`)
+`--shadow-*` (`shadow-md`)
+`--drop-shadow-*`
+`--blur-*`
+`--ease-*`
+`--animate-*`
 */
-
-@tailwind utilities;
-@import "tailwindcss";
-
-@import "./global.css";
-
-@layer utilities {
-    
+@utility area-* {
+    font-size: --value(--size-*);
 }
