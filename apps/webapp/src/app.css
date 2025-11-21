@@ -1,0 +1,14 @@
+/*
+https://tailwindcss.com/docs/preflight
+important: use this command to build/watch css in parallel instead of building it directly during next build (which is very slow!) 
+npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
+*/
+
+@tailwind utilities;
+@import "tailwindcss";
+
+@import "./global.css";
+
+@layer utilities {
+    
+}

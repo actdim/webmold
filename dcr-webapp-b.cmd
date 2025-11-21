@@ -1,0 +1,1 @@
+docker build -f dockerfile.webapp -t webmold-webapp:latest .

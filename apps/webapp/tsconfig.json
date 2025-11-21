@@ -1,0 +1,21 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "composite": true,
+        "declarationDir": "./dist",
+        "baseUrl": ".",
+        "rootDir": ".", // "src"
+        "outDir": "./dist",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.json",
+        "tests/**/*.ts",
+        "src/styles.d.ts_"
+    ],
+    "exclude": ["**/*.stories.tsx", "**/*.fixture.tsx", "dist", "node-modules"]
+}

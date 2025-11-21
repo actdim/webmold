@@ -1,0 +1,22 @@
+{
+  "app": {
+    "vars": {},
+    "classes": {}
+  },
+  "global": {
+    "vars": {
+      "colorPrimary": "--color-primary"
+    },
+    "classes": {}
+  },
+  "mui/mui.module": {
+    "vars": {},
+    "classes": {
+      "test": "test"
+    }
+  },
+  "prime/prime": {
+    "vars": {},
+    "classes": {}
+  }
+}

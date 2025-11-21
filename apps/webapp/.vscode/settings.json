@@ -1,0 +1,4 @@
+{
+    "tailwindCSS.experimental.configFile": "./src/global.css",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+}
