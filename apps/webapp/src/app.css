@@ -1,39 +1,11 @@
 @import './global.css';
 
-@property --alarm-color {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: red;
-}
+@import './theme.example.css' layer(theme);
+/* @import './theme.example.css' layer(theme) theme(static); */
 
-:root {
-}
+@import './theme.example.dark.css' layer(theme);
 
-@theme {
-    --color-primary: blue; /*gives class bg-primary etc*/
-    --color-alarm: var(--alarm-color);
-    /* 
-    --color-
-    --font-
-    --text-
-    --font-weight-
-    --tracking-
-    --leading- 
-    --breakpoint-
-    --container-
-    --spacing-
-    --radius-
-    --shadow-
-    --inset-shadow-
-    --drop-shadow-
-    --blur-
-    --perspective-
-    --aspect-
-    --ease-
-    --animate-
-    */
-    --size-test: 10px;
-}
+@import './utils.example.css';
 
 @layer base {
 }
@@ -41,33 +13,11 @@
 @layer components {
 }
 
-/* gives class custom */
-/* theme */
-@utility custom {
-    /* background-color: green; */
-    @apply bg-green-500;
-}
-
-/* gives classes color-* */
-@utility color-* {
-    color: --value(--color-*);
-}
-
-/* custom vars: */
-/*
-should work:
-`--color-*` (`text-red-500`, `bg-sky-300`)
-`--text-*` (`text-sm`, `text-xl`)
-`--font-weight-*` (`font-bold`)
-`--leading-*` (`leading-tight`)
-`--tracking-*` (`tracking-wide`)
-`--opacity-*` (`opacity-50`)
-`--shadow-*` (`shadow-md`)
-`--drop-shadow-*`
-`--blur-*`
-`--ease-*`
-`--animate-*`
-*/
-@utility area-* {
-    font-size: --value(--size-*);
+@layer utilities {
+    /* variant style */
+    .demo {
+        @variant hocus {
+            @apply bg-red-500;
+        }
+    }
 }

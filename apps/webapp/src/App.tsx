@@ -1,22 +1,23 @@
 // import './_app.css';
-import './global.css';
-import './app.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+// import './app.css';
+import { BrowserRouter, HashRouter, Route, Router, Routes } from 'react-router-dom';
 import Layout from './Layout';
-import Button from '@mui/material/Button';
-import Mui from './mui/Mui';
-import Prime from './prime/Prime';
+import TwRoot from './tw/tw';
+// import MuiRoot from './mui/mui';
+// import PrimeRoot from './prime/prime';
 
 function App() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout />}>
-                    <Route index element={<Mui />} />
-                    <Route path='prime' element={<Prime />} />
+                    <Route index element={<TwRoot />} />
+                    {/* <Route path='prime' element={<PrimeRoot />} />
+                    <Route path='tw' element={<TwRoot />} />
+                    <Route path='mui' element={<MuiRoot />} /> */}
                 </Route>
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 

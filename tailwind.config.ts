@@ -5,23 +5,13 @@ import { Config } from "tailwindcss";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    theme: {
-        extend: {
-            colors: {
-                // accent: 'var(--accent)',
-            },
-        },
-    },
     content: [
         // "./@/**/*.{html,md,js,ts,jsx,tsx,mdx}"
     ],
     // corePlugins: {
-    //   preflight: false
+    //     preflight: false
     // },
     plugins: [
-        // plugin(({ addVariant }) => {
-        //     addVariant("children", "&>*");
-        // }),
         require("@tailwindcss/typography"),
         // require("daisyui")
     ],

@@ -1,0 +1,44 @@
+@custom-variant hocus (&:hover, &:focus);
+
+/* gives class custom */
+@utility custom {
+    /* background-color: green; */
+    @apply text-4xl;
+    /* @apply bg-green-500; */
+    /* or with prefix: */
+    /* @apply tw:bg-green-500; */
+    /* custom var */
+    color: var(--color-test);
+    /* or static */
+    /* color: theme('color.test'); */
+}
+
+/* gives classes color-* */
+@utility color-* {
+    color: --value(--color-*);
+}
+
+/* custom vars: */
+/*
+should work:
+`--color-*` (`text-red-500`, `bg-sky-300`)
+`--text-*` (`text-sm`, `text-xl`)
+`--font-weight-*` (`font-bold`)
+`--leading-*` (`leading-tight`)
+`--tracking-*` (`tracking-wide`)
+`--opacity-*` (`opacity-50`)
+`--shadow-*` (`shadow-md`)
+`--drop-shadow-*`
+`--blur-*`
+`--ease-*`
+`--animate-*`
+*/
+@utility area-* {
+    font-size: --value(--size-*);
+    /* variant style */
+    @variant hocus {
+        /* background-color: gold; */
+        @apply bg-amber-500;
+        font-weight: bold;
+    }
+}

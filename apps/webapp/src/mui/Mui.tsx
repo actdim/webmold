@@ -1,4 +1,4 @@
-import c from '@/mui/mui.module.css';
+// import './mui.css';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -10,7 +10,7 @@ const theme = createTheme({
     },
 });
 
-function Mui() {
+function MuiRoot() {
     return (
         <ThemeProvider theme={theme}>
             <div className='p-4 bg-gray-100 flex flex-col max-w-sm gap-y-1'>
@@ -37,9 +37,9 @@ function Mui() {
                     Regular text inside div
                 </Typography>
             </div>
-            <div className={c.test}>text</div>            
+            
         </ThemeProvider>
     );
 }
 
-export default Mui;
+export default MuiRoot;

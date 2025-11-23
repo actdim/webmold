@@ -1,0 +1,6 @@
+/* @theme inline */
+/* @theme static */
+
+[data-theme="dark"] {
+    --color-test: brown;
+}

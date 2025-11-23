@@ -1,0 +1,35 @@
+@property --alarm-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: red;
+}
+
+/* @theme inline */
+/* @theme static */
+@theme {
+    /* classes bg-test, bg-primary, bg-alarm */
+    --color-test: blue;
+    --color-primary: blue;
+    --color-alarm: var(--alarm-color);
+    /* 
+    --color-
+    --font-
+    --text-
+    --font-weight-
+    --tracking-
+    --leading- 
+    --breakpoint-
+    --container-
+    --spacing-
+    --radius-
+    --shadow-
+    --inset-shadow-
+    --drop-shadow-
+    --blur-
+    --perspective-
+    --aspect-
+    --ease-
+    --animate-
+    */
+    --size-test: 10px;
+}
