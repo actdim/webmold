@@ -1,7 +1,6 @@
 import './tw.css';
 import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import { Icon } from '@iconify/react';
 
 const intent = cva('flex items-center gap-2', {
     variants: {

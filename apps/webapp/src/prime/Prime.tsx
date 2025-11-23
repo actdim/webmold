@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import './prime.css';
+import './prime.css';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
@@ -17,9 +17,10 @@ function PrimeRoot() {
                     placeholder='Ваше имя'
                     className='w-full mb-4'
                 />
+                {/* color-primary-bg border-primary-border border-2 rounded-xl */}
                 <Button
                     label={`Привет, ${name || 'гость'}`}
-                    className='p-button-primary bg-amber-500 border-2 rounded-3xl'
+                    className=''
                 />
             </Card>
             <div className='prose-lg'>

@@ -13,7 +13,7 @@ const theme = createTheme({
 function MuiRoot() {
     return (
         <ThemeProvider theme={theme}>
-            <div className='p-4 bg-gray-100 flex flex-col max-w-sm gap-y-1'>
+            <div className='p-4 bg-gray-100 flex flex-col max-w-64 gap-y-1'>
                 <Button variant='outlined' color='primary' className=''>
                     <i className='iconify mdi--abacus text-5xl animate-spin'></i>
                 </Button>

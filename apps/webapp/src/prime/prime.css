@@ -1,5 +1,18 @@
-@import '../global.css';
+@import '../app.css';
 
-@import 'primereact/resources/themes/saga-blue/theme.css';
-@import 'primereact/resources/primereact.min.css';
-@import 'primeicons/primeicons.css';
+@layer utilities {
+    @import 'primereact/resources/themes/saga-blue/theme.css';
+    /* @import 'primereact/resources/themes/bootstrap4-light-blue/theme.css'; */
+    /* @import 'primereact/resources/themes/lara-light-blue/theme.css'; */
+    /* @import 'primereact/resources/themes/lara-light-green/theme.css'; */
+    /* dark */
+    /* @import 'primereact/resources/themes/lara-dark-blue/theme.css'; */
+    /* @import 'primereact/resources/themes/lara-dark-green/theme.css'; */
+    /* @import 'primereact/resources/themes/vela-blue/theme.css'; */
+    /* @import 'primereact/resources/themes/vela-green/theme.css'; */
+    /* @import 'primereact/resources/themes/luna-blue/theme.css'; */
+    /* @import 'primereact/resources/themes/luna-green/theme.css'; */
+    /* @import 'primereact/resources/themes/arya-green/theme.css'; */
+    @import 'primereact/resources/primereact.min.css';
+    /* @import 'primeicons/primeicons.css'; */
+}

@@ -32,4 +32,60 @@
     --animate-
     */
     --size-test: 10px;
+
+    /* Defaults */
+
+    --spacing-none: 0;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 1.5rem;
+
+    /* Intent colors */
+
+    /* Primary */
+    --color-primary-bg: #2563eb; /* bg-blue-600 */
+    --color-primary-text: #ffffff; /* text-white */
+    --color-primary-border: #1d4ed8; /* border-blue-700 */
+
+    /* Secondary */
+    --color-secondary-bg: #e5e7eb; /* bg-gray-200 */
+    --color-secondary-text: #111827; /* text-gray-900 */
+    --color-secondary-border: #d1d5db; /* border-gray-300 */
+
+    /* neutral */
+    --color-muted-bg: #ffffff; /* bg-white */
+    --color-muted-text: #1f2937; /* text-gray-800 */
+    --color-muted-border: #d1d5db; /* border-gray-300 */
+
+    /* Success */
+    --color-success-bg: #16a34a; /* bg-green-600 */
+    --color-success-text: #ffffff; /* text-white */
+    --color-success-border: #15803d; /* border-green-700 */
+
+    /* Warning */
+    --color-warning-bg: #facc15; /* bg-yellow-500 */
+    --color-warning-text: #000000; /* text-black */
+    --color-warning-border: #eab308; /* border-yellow-600 */
+
+    /* Danger */
+    --color-danger-bg: #dc2626; /* bg-red-600 */
+    --color-danger-text: #ffffff; /* text-white */
+    --color-danger-border: #b91c1c; /* border-red-700 */
+
+    /* Info */
+    --color-info-bg: #bfdbfe; /* bg-blue-200 */
+    --color-info-text: #1e3a8a; /* text-blue-900 */
+    --color-info-border: #60a5fa; /* border-blue-400 */
+
+    /* Light */
+    --color-light-bg: #ffffff; /* bg-white */
+    --color-light-text: #111827; /* text-gray-900 */
+    --color-light-border: #d1d5db; /* border-gray-300 */
+
+    /* Dark */
+    --color-dark-bg: #111827; /* bg-gray-900 */
+    --color-dark-text: #ffffff; /* text-white */
+    --color-dark-border: #1f2937; /* border-gray-800 */
 }
