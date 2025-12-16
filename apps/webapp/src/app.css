@@ -13,6 +13,7 @@
 @layer components {
 }
 
+/* all styles should be in some layer! */
 @layer utilities {
     /* variant style */
     .demo {

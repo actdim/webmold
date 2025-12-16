@@ -12,5 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "iconify.inplace": false,
-    "iconify.annotations": true
+    "iconify.annotations": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 120000
 }

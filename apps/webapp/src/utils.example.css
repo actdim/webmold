@@ -1,5 +1,24 @@
 @custom-variant hocus (&:hover, &:focus);
 
+/* combination */
+@custom-variant fover (hover, focus);
+
+/* examples */
+/* self */
+/* @custom-variant dialog ([data-dialog] *); */
+/* children */
+/* @custom-variant in-dialog ([data-dialog] &); */
+/* 0 specificity */
+@custom-variant in-dialog (where([data-dialog] &));
+
+@layer utilities {
+    .in-dialog-defaults {
+        @variant in-dialog {
+            @apply font-bold;
+        }
+    }
+}
+
 /* gives class custom */
 @utility custom {
     /* background-color: green; */

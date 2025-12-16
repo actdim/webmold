@@ -81,6 +81,7 @@ export default defineConfig(
                 sourceType: 'module',
                 project: './tsconfig.json',
                 ecmaFeatures: { jsx: true },
+                // tsconfigRootDir: import.meta.dirname
             },
             globals: {
                 NodeJS: 'readonly', // or writable

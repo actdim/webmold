@@ -1,26 +1,12 @@
 import './tw.css';
-import { cva } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
-
-const intent = cva('flex items-center gap-2', {
-    variants: {
-        type: {
-            normal: 'font-normal',
-            alarm: 'text-red-500 font-bold',
-            // primary: "",
-            // outline: "",
-        },
-    },
-    defaultVariants: {
-        type: 'normal',
-    },
-});
+import { InputBox } from './inputBox';
 
 function TwRoot() {
     return (
-        <>
-            <button className={cn(intent({ type: 'alarm' }), '')}>Click Me?</button>
-        </>
+        <div className='w-[220px]'>
+            <InputBox size='lg' value={'valid'}></InputBox>
+            <InputBox size='md' invalid value={'invalid'}></InputBox>
+        </div>
     );
 }
 
