@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 
 export const Layout = (props: {}) => {
     return (
-        <div className='min-h-screen flex flex-col justify-center'>
+        <div>
             <header>Menu/Header</header>
-            <main className='flex-1'>
+            <main>
                 <Outlet />
             </main>
             <footer>Footer</footer>

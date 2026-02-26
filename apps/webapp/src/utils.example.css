@@ -9,6 +9,7 @@
 /* children */
 /* @custom-variant in-dialog ([data-dialog] &); */
 /* 0 specificity */
+
 @custom-variant in-dialog (where([data-dialog] &));
 
 @layer utilities {

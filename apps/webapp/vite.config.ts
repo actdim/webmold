@@ -50,7 +50,10 @@ export default defineConfig({
         open: true,
         proxy: {
             "/api": "http://localhost:3000"
-        }
+        },
+        watch: {
+            usePolling: true,
+        },
     },
     base: '/',
     define: {

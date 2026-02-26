@@ -18,10 +18,7 @@ function PrimeRoot() {
                     className='w-full mb-4'
                 />
                 {/* color-primary-bg border-primary-border border-2 rounded-xl */}
-                <Button
-                    label={`Привет, ${name || 'гость'}`}
-                    className=''
-                />
+                <Button label={`Привет, ${name || 'гость'}`} className='' />
             </Card>
             <div className='prose-lg'>
                 <p>Text with Tailwind Typography</p>
