@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import './prime.css';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
+import './prime.css';
 
 function PrimeRoot() {
     const [name, setName] = useState('');

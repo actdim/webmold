@@ -1,9 +1,10 @@
 @import './global.css';
 
-@import './theme.example.css' layer(theme);
+/* @import './theme.example.css' layer(theme); */
+
 /* @import './theme.example.css' layer(theme) theme(static); */
 
-@import './theme.example.dark.css' layer(theme);
+/* @import './theme.example.dark.css' layer(theme); */
 
 @import './utils.example.css';
 

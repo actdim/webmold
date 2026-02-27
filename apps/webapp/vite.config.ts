@@ -56,6 +56,18 @@ export default defineConfig({
         },
     },
     base: '/',
+    build: {
+        rollupOptions: {
+            input: {
+                main:  resolve(rootPath, 'index.html'),
+                tw:    resolve(rootPath, 'tw/index.html'),
+                mui:   resolve(rootPath, 'mui/index.html'),
+                prime: resolve(rootPath, 'prime/index.html'),
+                daisy:  resolve(rootPath, 'daisy/index.html'),
+                shadcn: resolve(rootPath, 'shadcn/index.html'),
+            },
+        },
+    },
     define: {
         __DEBUG__: JSON.stringify(process.env.NODE_ENV !== 'production'),
     },

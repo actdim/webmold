@@ -1,9 +1,5 @@
-// import './_app.css';
-// import './app.css';
+import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import TwRoot from './tw/tw';
-import MuiRoot from './mui/mui';
-import PrimeRoot from './prime/prime';
 import List from './List';
 
 function App() {
@@ -12,9 +8,7 @@ function App() {
             <Routes>
                 <Route>
                     <Route index element={<List />} />
-                    <Route path='prime' element={<PrimeRoot />} />
-                    <Route path='tw' element={<TwRoot />} />
-                    <Route path='mui' element={<MuiRoot />} />
+                    {/* <Route path='about' element={<AboutPage />} /> */}
                 </Route>
             </Routes>
         </BrowserRouter>

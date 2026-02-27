@@ -1,7 +1,7 @@
-// import './mui.css';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import './mui.css';
 
 const theme = createTheme({
     palette: {
@@ -37,7 +37,6 @@ function MuiRoot() {
                     Regular text inside div
                 </Typography>
             </div>
-            
         </ThemeProvider>
     );
 }

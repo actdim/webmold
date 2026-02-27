@@ -3,34 +3,20 @@ important: use this command to build/watch css in parallel instead of building i
 npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
 */
 
-/* (!) default tailwind loader */
-/* @import 'tailwindcss'; */
-
-/* (!) instead of preflight */
-@import 'normalize.css';
-
+@import 'tailwindcss';
+/* 
+@import 'normalize.css' layer(base);
 @layer theme, base, components, utilities;
-
-/* @import 'tailwindcss/theme.css' layer(theme) theme(static); */
 @import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities); 
+*/
 
-/* (!) preflight */
-/* @import "tailwindcss/preflight.css" layer(base); */
-/* same as @tailwind utilities;*/
-@import 'tailwindcss/utilities.css' layer(utilities);
-/* for release */
-/* @import "tailwindcss/utilities.css" layer(utilities) source(none); */
-/* with priority */
-/* @import "tailwindcss/utilities.css" layer(utilities) important; */
-
-/* for tw: prefix */
-/* @import 'tailwindcss/utilities' prefix(tw);
-@theme reference prefix(tw); */
-
-/* @custom-variant dark (&:where(.dark, .dark *)); */
-/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+@custom-variant dark (&:is(.dark *));
 
 @plugin '@tailwindcss/typography';
+
+/* @import 'tw-animate-css'; */
+@plugin 'tailwindcss-animate';
 
 @plugin '@iconify/tailwind4' {
     /* prefix: iconify; */
