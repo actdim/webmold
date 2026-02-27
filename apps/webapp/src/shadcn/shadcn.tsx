@@ -104,6 +104,7 @@ export default function ShadcnRoot() {
                         {['buttons','badges','alerts','form','selection','card','accordion','tabs','overlays','nav','table','feedback','calendar'].map(s => (
                             <a key={s} href={`#${s}`} className='text-muted-foreground hover:text-foreground capitalize'>{s}</a>
                         ))}
+                        <a href='/' className='text-sm text-muted-foreground hover:text-foreground transition-colors'>← Back</a>
                         <div className='ml-auto flex items-center gap-3'>
                             {/* Base theme */}
                             <div className='flex items-center gap-1'>
@@ -138,6 +139,8 @@ export default function ShadcnRoot() {
                             <Button size='sm' variant='outline' onClick={toggleDark}>
                                 {dark ? 'Light' : 'Dark'}
                             </Button>
+                            <div className='w-px h-4 bg-border' />
+                            
                         </div>
                     </div>
                 </header>

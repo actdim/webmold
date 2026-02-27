@@ -5,11 +5,11 @@ function Section({ title, children }: { title: string; children: React.ReactNode
     return (
         <section className='rounded-xl bg-base-100 border border-base-300 shadow-sm'>
             <div className='px-5 py-3 border-b border-base-300 bg-base-200 rounded-t-xl'>
-                <h2 className='text-sm font-semibold text-base-content/60 uppercase tracking-wide'>{title}</h2>
+                <h2 className='text-sm font-semibold text-base-content/60 uppercase tracking-wide'>
+                    {title}
+                </h2>
             </div>
-            <div className='p-5 space-y-4'>
-                {children}
-            </div>
+            <div className='p-5 space-y-4'>{children}</div>
         </section>
     );
 }
@@ -37,7 +37,9 @@ function Buttons() {
                 <button className='btn btn-ghost'>Ghost</button>
                 <button className='btn btn-link'>Link</button>
                 <button className='btn btn-primary btn-active'>Active</button>
-                <button className='btn btn-primary' disabled>Disabled</button>
+                <button className='btn btn-primary' disabled>
+                    Disabled
+                </button>
             </div>
             {/* sizes */}
             <div className='flex flex-wrap items-center gap-2'>
@@ -50,13 +52,35 @@ function Buttons() {
             {/* shapes */}
             <div className='flex flex-wrap items-center gap-2'>
                 <button className='btn btn-square btn-outline'>
-                    <svg xmlns='http://www.w3.org/2000/svg' className='size-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='size-5'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                    >
+                        <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M6 18L18 6M6 6l12 12'
+                        />
                     </svg>
                 </button>
                 <button className='btn btn-circle btn-primary'>
-                    <svg xmlns='http://www.w3.org/2000/svg' className='size-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4v16m8-8H4' />
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='size-5'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                    >
+                        <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M12 4v16m8-8H4'
+                        />
                     </svg>
                 </button>
                 <button className='btn btn-primary btn-wide'>Wide Button</button>
@@ -124,33 +148,79 @@ function Alerts() {
     return (
         <Section title='Alerts'>
             <div role='alert' className='alert alert-info'>
-                <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='size-5 shrink-0 stroke-current'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' />
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    className='size-5 shrink-0 stroke-current'
+                >
+                    <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
                 </svg>
                 <span>New software update available.</span>
             </div>
             <div role='alert' className='alert alert-success'>
-                <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='size-5 shrink-0 stroke-current'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' />
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    className='size-5 shrink-0 stroke-current'
+                >
+                    <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
                 </svg>
                 <span>Your purchase has been confirmed!</span>
             </div>
             <div role='alert' className='alert alert-warning'>
-                <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='size-5 shrink-0 stroke-current'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' />
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    className='size-5 shrink-0 stroke-current'
+                >
+                    <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
+                    />
                 </svg>
                 <span>Warning: Invalid email address!</span>
             </div>
             <div role='alert' className='alert alert-error'>
-                <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='size-5 shrink-0 stroke-current'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z' />
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    className='size-5 shrink-0 stroke-current'
+                >
+                    <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
                 </svg>
                 <span>Error! Task failed successfully.</span>
             </div>
             <div className='flex flex-wrap gap-2'>
-                <div role='alert' className='alert alert-soft alert-info w-auto'>Soft info</div>
-                <div role='alert' className='alert alert-outline alert-success w-auto'>Outline success</div>
-                <div role='alert' className='alert alert-dash alert-warning w-auto'>Dash warning</div>
+                <div role='alert' className='alert alert-soft alert-info w-auto'>
+                    Soft info
+                </div>
+                <div role='alert' className='alert alert-outline alert-success w-auto'>
+                    Outline success
+                </div>
+                <div role='alert' className='alert alert-dash alert-warning w-auto'>
+                    Dash warning
+                </div>
             </div>
         </Section>
     );
@@ -163,8 +233,18 @@ function Stats() {
             <div className='stats shadow w-full'>
                 <div className='stat'>
                     <div className='stat-figure text-primary'>
-                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='inline-block size-8 stroke-current'>
-                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' />
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            className='inline-block size-8 stroke-current'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth={2}
+                                d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+                            />
                         </svg>
                     </div>
                     <div className='stat-title'>Total Likes</div>
@@ -173,8 +253,18 @@ function Stats() {
                 </div>
                 <div className='stat'>
                     <div className='stat-figure text-secondary'>
-                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='inline-block size-8 stroke-current'>
-                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            className='inline-block size-8 stroke-current'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth={2}
+                                d='M13 10V3L4 14h7v7l9-11h-7z'
+                            />
                         </svg>
                     </div>
                     <div className='stat-title'>Page Views</div>
@@ -184,7 +274,12 @@ function Stats() {
                 <div className='stat'>
                     <div className='stat-figure text-secondary'>
                         <div className='avatar avatar-online'>
-                            <div className='w-16 rounded-full bg-base-300 flex items-center justify-center text-2xl'>👤</div>
+                            <div
+                                className='w-16 rounded-full bg-base-300 flex items-center
+                                    justify-center text-2xl'
+                            >
+                                👤
+                            </div>
                         </div>
                     </div>
                     <div className='stat-value'>86%</div>
@@ -204,7 +299,9 @@ function Cards() {
                 <div className='card card-border w-72'>
                     <div className='card-body'>
                         <h2 className='card-title'>Card with border</h2>
-                        <p className='text-sm text-base-content/70'>A simple card with a border style.</p>
+                        <p className='text-sm text-base-content/70'>
+                            A simple card with a border style.
+                        </p>
                         <div className='card-actions justify-end mt-2'>
                             <button className='btn btn-primary btn-sm'>Buy Now</button>
                         </div>
@@ -213,7 +310,9 @@ function Cards() {
                 <div className='card bg-primary text-primary-content w-72'>
                     <div className='card-body'>
                         <h2 className='card-title'>Primary Card</h2>
-                        <p className='text-sm opacity-80'>Colored card using primary theme color.</p>
+                        <p className='text-sm opacity-80'>
+                            Colored card using primary theme color.
+                        </p>
                         <div className='card-actions justify-end mt-2'>
                             <button className='btn btn-ghost btn-sm'>Learn More</button>
                         </div>
@@ -221,7 +320,12 @@ function Cards() {
                 </div>
                 <div className='card card-side card-border w-80'>
                     <figure className='p-4'>
-                        <div className='size-16 rounded-lg bg-base-300 flex items-center justify-center text-3xl'>🖼️</div>
+                        <div
+                            className='size-16 rounded-lg bg-base-300 flex items-center
+                                justify-center text-3xl'
+                        >
+                            🖼️
+                        </div>
                     </figure>
                     <div className='card-body'>
                         <h2 className='card-title text-sm'>Side card</h2>
@@ -246,7 +350,11 @@ function FormControls() {
                     <input type='text' placeholder='Default input' className='input' />
                     <input type='text' placeholder='Primary' className='input input-primary' />
                     <input type='text' placeholder='Error state' className='input input-error' />
-                    <input type='text' placeholder='Success state' className='input input-success' />
+                    <input
+                        type='text'
+                        placeholder='Success state'
+                        className='input input-success'
+                    />
                 </div>
                 {/* fieldset */}
                 <fieldset className='fieldset'>
@@ -267,7 +375,11 @@ function FormControls() {
                 {/* checkboxes & toggles */}
                 <div className='flex flex-col gap-3'>
                     <label className='flex items-center gap-2 cursor-pointer'>
-                        <input type='checkbox' defaultChecked className='checkbox checkbox-primary' />
+                        <input
+                            type='checkbox'
+                            defaultChecked
+                            className='checkbox checkbox-primary'
+                        />
                         <span className='text-sm'>Remember me</span>
                     </label>
                     <label className='flex items-center gap-2 cursor-pointer'>
@@ -293,7 +405,12 @@ function FormControls() {
                     <p className='text-sm font-medium mb-1'>Size</p>
                     {['Small', 'Medium', 'Large'].map((s, i) => (
                         <label key={s} className='flex items-center gap-2 cursor-pointer'>
-                            <input type='radio' name='size' defaultChecked={i === 1} className='radio radio-primary' />
+                            <input
+                                type='radio'
+                                name='size'
+                                defaultChecked={i === 1}
+                                className='radio radio-primary'
+                            />
                             <span className='text-sm'>{s}</span>
                         </label>
                     ))}
@@ -301,15 +418,48 @@ function FormControls() {
                 {/* range */}
                 <div className='flex flex-col gap-3 w-40'>
                     <p className='text-sm font-medium'>Range</p>
-                    <input type='range' min='0' max='100' defaultValue='40' className='range range-primary range-sm' />
-                    <input type='range' min='0' max='100' defaultValue='70' className='range range-secondary' />
+                    <input
+                        type='range'
+                        min='0'
+                        max='100'
+                        defaultValue='40'
+                        className='range range-primary range-sm'
+                    />
+                    <input
+                        type='range'
+                        min='0'
+                        max='100'
+                        defaultValue='70'
+                        className='range range-secondary'
+                    />
                     <p className='text-sm font-medium'>Rating</p>
                     <div className='rating'>
-                        <input type='radio' name='rating' className='mask mask-star-2 bg-orange-400' />
-                        <input type='radio' name='rating' className='mask mask-star-2 bg-orange-400' />
-                        <input type='radio' name='rating' defaultChecked className='mask mask-star-2 bg-orange-400' />
-                        <input type='radio' name='rating' className='mask mask-star-2 bg-orange-400' />
-                        <input type='radio' name='rating' className='mask mask-star-2 bg-orange-400' />
+                        <input
+                            type='radio'
+                            name='rating'
+                            className='mask mask-star-2 bg-orange-400'
+                        />
+                        <input
+                            type='radio'
+                            name='rating'
+                            className='mask mask-star-2 bg-orange-400'
+                        />
+                        <input
+                            type='radio'
+                            name='rating'
+                            defaultChecked
+                            className='mask mask-star-2 bg-orange-400'
+                        />
+                        <input
+                            type='radio'
+                            name='rating'
+                            className='mask mask-star-2 bg-orange-400'
+                        />
+                        <input
+                            type='radio'
+                            name='rating'
+                            className='mask mask-star-2 bg-orange-400'
+                        />
                     </div>
                 </div>
             </div>
@@ -327,26 +477,43 @@ function TabsSection() {
                 <div>
                     <div role='tablist' className='tabs tabs-border'>
                         {['Profile', 'Settings', 'Stats'].map((t, i) => (
-                            <button key={t} role='tab' onClick={() => setActive(i)}
-                                className={`tab ${active === i ? 'tab-active' : ''}`}>
+                            <button
+                                key={t}
+                                role='tab'
+                                onClick={() => setActive(i)}
+                                className={`tab ${active === i ? 'tab-active' : ''}`}
+                            >
                                 {t}
                             </button>
                         ))}
                     </div>
-                    <div className='p-4 border border-t-0 border-base-300 rounded-b-lg text-sm text-base-content/70'>
-                        {['Manage your public profile.', 'Configure account settings.', 'View your stats and analytics.'][active]}
+                    <div
+                        className='p-4 border border-t-0 border-base-300 rounded-b-lg text-sm
+                            text-base-content/70'
+                    >
+                        {
+                            [
+                                'Manage your public profile.',
+                                'Configure account settings.',
+                                'View your stats and analytics.',
+                            ][active]
+                        }
                     </div>
                 </div>
                 {/* lifted */}
                 <div role='tablist' className='tabs tabs-lift'>
                     {['Home', 'Products', 'Orders'].map((t, i) => (
-                        <button key={t} role='tab' className={`tab ${i === 1 ? 'tab-active' : ''}`}>{t}</button>
+                        <button key={t} role='tab' className={`tab ${i === 1 ? 'tab-active' : ''}`}>
+                            {t}
+                        </button>
                     ))}
                 </div>
                 {/* boxed */}
                 <div role='tablist' className='tabs tabs-box'>
                     {['Monthly', 'Yearly'].map((t, i) => (
-                        <button key={t} role='tab' className={`tab ${i === 0 ? 'tab-active' : ''}`}>{t}</button>
+                        <button key={t} role='tab' className={`tab ${i === 0 ? 'tab-active' : ''}`}>
+                            {t}
+                        </button>
                     ))}
                 </div>
             </div>
@@ -360,14 +527,28 @@ function Accordion() {
         <Section title='Accordion'>
             <div className='join join-vertical w-full max-w-lg'>
                 {[
-                    { q: 'What is DaisyUI?', a: 'DaisyUI is the most popular component library for Tailwind CSS.' },
-                    { q: 'Is it free?', a: 'Yes! DaisyUI is free and open source. No premium plans.' },
-                    { q: 'Does it work with React?', a: 'Yes, DaisyUI works with any framework including React, Vue, Svelte, etc.' },
+                    {
+                        q: 'What is DaisyUI?',
+                        a: 'DaisyUI is the most popular component library for Tailwind CSS.',
+                    },
+                    {
+                        q: 'Is it free?',
+                        a: 'Yes! DaisyUI is free and open source. No premium plans.',
+                    },
+                    {
+                        q: 'Does it work with React?',
+                        a: 'Yes, DaisyUI works with any framework including React, Vue, Svelte, etc.',
+                    },
                 ].map((item, i) => (
-                    <div key={i} className='collapse collapse-arrow join-item border border-base-300'>
+                    <div
+                        key={i}
+                        className='collapse collapse-arrow join-item border border-base-300'
+                    >
                         <input type='radio' name='faq' defaultChecked={i === 0} />
                         <div className='collapse-title font-semibold'>{item.q}</div>
-                        <div className='collapse-content text-sm text-base-content/70'>{item.a}</div>
+                        <div className='collapse-content text-sm text-base-content/70'>
+                            {item.a}
+                        </div>
                     </div>
                 ))}
             </div>
@@ -418,11 +599,31 @@ function Feedback() {
             <div className='flex flex-wrap gap-8'>
                 {/* progress */}
                 <div className='flex flex-col gap-2 w-56'>
-                    <progress className='progress progress-primary w-full' value='40' max='100'></progress>
-                    <progress className='progress progress-secondary w-full' value='70' max='100'></progress>
-                    <progress className='progress progress-success w-full' value='90' max='100'></progress>
-                    <progress className='progress progress-warning w-full' value='55' max='100'></progress>
-                    <progress className='progress progress-error w-full' value='25' max='100'></progress>
+                    <progress
+                        className='progress progress-primary w-full'
+                        value='40'
+                        max='100'
+                    ></progress>
+                    <progress
+                        className='progress progress-secondary w-full'
+                        value='70'
+                        max='100'
+                    ></progress>
+                    <progress
+                        className='progress progress-success w-full'
+                        value='90'
+                        max='100'
+                    ></progress>
+                    <progress
+                        className='progress progress-warning w-full'
+                        value='55'
+                        max='100'
+                    ></progress>
+                    <progress
+                        className='progress progress-error w-full'
+                        value='25'
+                        max='100'
+                    ></progress>
                     <progress className='progress w-full'></progress>
                 </div>
                 {/* skeleton */}
@@ -467,7 +668,10 @@ function Avatars() {
                 <div className='flex gap-3 items-end'>
                     {['size-6', 'size-8', 'size-12', 'size-16', 'size-20'].map((s) => (
                         <div key={s} className='avatar'>
-                            <div className={`${s} rounded-full bg-neutral text-neutral-content flex items-center justify-center`}>
+                            <div
+                                className={`${s} rounded-full bg-neutral text-neutral-content flex
+                                items-center justify-center`}
+                            >
                                 <span className='text-xs'>👤</span>
                             </div>
                         </div>
@@ -476,10 +680,20 @@ function Avatars() {
                 {/* with status */}
                 <div className='flex gap-3'>
                     <div className='avatar avatar-online'>
-                        <div className='size-12 rounded-full bg-primary text-primary-content flex items-center justify-center font-bold'>JD</div>
+                        <div
+                            className='size-12 rounded-full bg-primary text-primary-content flex
+                                items-center justify-center font-bold'
+                        >
+                            JD
+                        </div>
                     </div>
                     <div className='avatar avatar-offline'>
-                        <div className='size-12 rounded-full bg-secondary text-secondary-content flex items-center justify-center font-bold'>AB</div>
+                        <div
+                            className='size-12 rounded-full bg-secondary text-secondary-content flex
+                                items-center justify-center font-bold'
+                        >
+                            AB
+                        </div>
                     </div>
                 </div>
                 {/* placeholder */}
@@ -492,7 +706,10 @@ function Avatars() {
                 <div className='avatar-group -space-x-4'>
                     {['bg-primary', 'bg-secondary', 'bg-accent', 'bg-neutral'].map((c, i) => (
                         <div key={i} className='avatar avatar-placeholder'>
-                            <div className={`size-10 rounded-full ${c} text-white flex items-center justify-center text-xs font-bold`}>
+                            <div
+                                className={`size-10 rounded-full ${c} text-white flex items-center
+                                justify-center text-xs font-bold`}
+                            >
                                 {String.fromCharCode(65 + i)}
                             </div>
                         </div>
@@ -514,10 +731,18 @@ function StepsSection() {
                 <li className='step'>Receive Product</li>
             </ul>
             <ul className='steps steps-horizontal w-full'>
-                <li data-content='✓' className='step step-success'>Step 1</li>
-                <li data-content='✓' className='step step-success'>Step 2</li>
-                <li data-content='●' className='step step-warning'>Step 3</li>
-                <li data-content='✕' className='step step-error'>Step 4</li>
+                <li data-content='✓' className='step step-success'>
+                    Step 1
+                </li>
+                <li data-content='✓' className='step step-success'>
+                    Step 2
+                </li>
+                <li data-content='●' className='step step-warning'>
+                    Step 3
+                </li>
+                <li data-content='✕' className='step step-error'>
+                    Step 4
+                </li>
             </ul>
         </Section>
     );
@@ -533,20 +758,42 @@ function DropdownTooltip() {
                     <div tabIndex={0} role='button' className='btn btn-primary m-1'>
                         Click me ▾
                     </div>
-                    <ul tabIndex={0} className='dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow border border-base-300'>
-                        <li><a>Profile</a></li>
-                        <li><a>Settings</a></li>
+                    <ul
+                        tabIndex={0}
+                        className='dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2
+                            shadow border border-base-300'
+                    >
+                        <li>
+                            <a>Profile</a>
+                        </li>
+                        <li>
+                            <a>Settings</a>
+                        </li>
                         <hr className='my-1 border-base-300' />
-                        <li><a className='text-error'>Logout</a></li>
+                        <li>
+                            <a className='text-error'>Logout</a>
+                        </li>
                     </ul>
                 </div>
                 {/* dropdown hover */}
                 <div className='dropdown dropdown-hover'>
-                    <div tabIndex={0} role='button' className='btn m-1'>Hover me ▾</div>
-                    <ul tabIndex={0} className='dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow border border-base-300'>
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                        <li><a>Item 3</a></li>
+                    <div tabIndex={0} role='button' className='btn m-1'>
+                        Hover me ▾
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className='dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2
+                            shadow border border-base-300'
+                    >
+                        <li>
+                            <a>Item 1</a>
+                        </li>
+                        <li>
+                            <a>Item 2</a>
+                        </li>
+                        <li>
+                            <a>Item 3</a>
+                        </li>
                     </ul>
                 </div>
                 {/* tooltips */}
@@ -560,7 +807,10 @@ function DropdownTooltip() {
                     <div className='tooltip tooltip-right' data-tip='Appears on the right'>
                         <button className='btn btn-secondary'>Right tip</button>
                     </div>
-                    <div className='tooltip tooltip-bottom tooltip-error' data-tip='Something went wrong'>
+                    <div
+                        className='tooltip tooltip-bottom tooltip-error'
+                        data-tip='Something went wrong'
+                    >
                         <button className='btn btn-error btn-outline'>Error tip</button>
                     </div>
                 </div>
@@ -582,7 +832,9 @@ function ModalSection() {
                     <div className='modal-box'>
                         <h3 className='font-bold text-lg'>Hello!</h3>
                         <p className='py-4 text-sm text-base-content/70'>
-                            This is a DaisyUI modal using the native HTML <code className='bg-base-200 px-1 rounded'>&lt;dialog&gt;</code> element. Press ESC or click the button to close.
+                            This is a DaisyUI modal using the native HTML{' '}
+                            <code className='bg-base-200 px-1 rounded'>&lt;dialog&gt;</code>{' '}
+                            element. Press ESC or click the button to close.
                         </p>
                         <div className='modal-action'>
                             <form method='dialog'>
@@ -595,17 +847,31 @@ function ModalSection() {
                     </form>
                 </dialog>
                 {/* alert dialog style */}
-                <button className='btn btn-error btn-outline'
-                    onClick={() => (document.getElementById('confirm-modal') as HTMLDialogElement)?.showModal()}>
+                <button
+                    className='btn btn-error btn-outline'
+                    onClick={() =>
+                        (document.getElementById('confirm-modal') as HTMLDialogElement)?.showModal()
+                    }
+                >
                     Confirm Action
                 </button>
                 <dialog id='confirm-modal' className='modal'>
                     <div className='modal-box max-w-sm'>
                         <h3 className='font-bold text-lg'>Are you sure?</h3>
-                        <p className='py-4 text-sm text-base-content/70'>This action cannot be undone. This will permanently delete your account.</p>
+                        <p className='py-4 text-sm text-base-content/70'>
+                            This action cannot be undone. This will permanently delete your account.
+                        </p>
                         <div className='modal-action gap-2'>
-                            <button className='btn btn-error btn-sm'
-                                onClick={() => (document.getElementById('confirm-modal') as HTMLDialogElement)?.close()}>
+                            <button
+                                className='btn btn-error btn-sm'
+                                onClick={() =>
+                                    (
+                                        document.getElementById(
+                                            'confirm-modal'
+                                        ) as HTMLDialogElement
+                                    )?.close()
+                                }
+                            >
                                 Delete
                             </button>
                             <form method='dialog'>
@@ -613,7 +879,9 @@ function ModalSection() {
                             </form>
                         </div>
                     </div>
-                    <form method='dialog' className='modal-backdrop'><button>close</button></form>
+                    <form method='dialog' className='modal-backdrop'>
+                        <button>close</button>
+                    </form>
                 </dialog>
             </div>
         </Section>
@@ -628,23 +896,50 @@ function NavbarSection() {
                 <div className='navbar-start'>
                     <div className='dropdown'>
                         <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
-                            <svg xmlns='http://www.w3.org/2000/svg' className='size-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h8m-8 6h16' />
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                className='size-5'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                            >
+                                <path
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    strokeWidth={2}
+                                    d='M4 6h16M4 12h8m-8 6h16'
+                                />
                             </svg>
                         </div>
-                        <ul tabIndex={0} className='menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-40 p-2 shadow'>
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Contact</a></li>
+                        <ul
+                            tabIndex={0}
+                            className='menu menu-sm dropdown-content bg-base-100 rounded-box z-10
+                                mt-3 w-40 p-2 shadow'
+                        >
+                            <li>
+                                <a>Home</a>
+                            </li>
+                            <li>
+                                <a>About</a>
+                            </li>
+                            <li>
+                                <a>Contact</a>
+                            </li>
                         </ul>
                     </div>
                     <a className='btn btn-ghost text-xl font-bold'>daisyUI</a>
                 </div>
                 <div className='navbar-center hidden lg:flex'>
                     <ul className='menu menu-horizontal px-1'>
-                        <li><a>Home</a></li>
-                        <li><a>Products</a></li>
-                        <li><a>About</a></li>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Products</a>
+                        </li>
+                        <li>
+                            <a>About</a>
+                        </li>
                     </ul>
                 </div>
                 <div className='navbar-end gap-2'>
@@ -656,17 +951,160 @@ function NavbarSection() {
     );
 }
 
+const THEMES = [
+    'light',
+    'dark',
+    'cupcake',
+    'bumblebee',
+    'emerald',
+    'corporate',
+    'synthwave',
+    'retro',
+    'cyberpunk',
+    'valentine',
+    'halloween',
+    'garden',
+    'forest',
+    'aqua',
+    'lofi',
+    'pastel',
+    'fantasy',
+    'wireframe',
+    'black',
+    'luxury',
+    'dracula',
+    'cmyk',
+    'autumn',
+    'business',
+    'acid',
+    'lemonade',
+    'night',
+    'coffee',
+    'winter',
+    'dim',
+    'nord',
+    'sunset',
+    'caramellatte',
+    'abyss',
+    'silk',
+] as const;
+
+type Theme = (typeof THEMES)[number];
+
 /* ── Main ────────────────────────────────────────── */
 export default function DaisyRoot() {
+    const [theme, setTheme] = React.useState<Theme>('light');
+    const [open, setOpen] = React.useState(false);
+    const dropdownRef = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+        const handler = (e: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handler);
+        return () => document.removeEventListener('mousedown', handler);
+    }, []);
+
+    const applyTheme = (t: Theme) => {
+        setTheme(t);
+        setOpen(false);
+        // (document.activeElement as HTMLElement)?.blur();
+    };
+
     return (
-        <div className='min-h-screen bg-base-200'>
+        <div className='min-h-screen bg-base-200' data-theme={theme}>
             <div className='navbar bg-base-100 border-b border-base-300 sticky top-0 z-50'>
                 <div className='mx-auto max-w-5xl w-full px-4 flex items-center justify-between'>
                     <div className='flex items-center gap-2'>
                         <span className='text-xl font-bold text-primary'>daisyUI</span>
                         <span className='badge badge-primary badge-sm'>v5</span>
                     </div>
-                    <a href='/' className='btn btn-ghost btn-sm'>← Back</a>
+                    {/* Theme picker — React-controlled */}
+                    <div ref={dropdownRef} className='relative'>
+                        <button
+                            onClick={() => setOpen((v) => !v)}
+                            className='btn btn-ghost btn-sm gap-1'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                className='size-4'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                                strokeWidth={2}
+                            >
+                                <path
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    d='M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'
+                                />
+                            </svg>
+                            <span className='capitalize'>{theme}</span>
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                className={`size-3 opacity-60 transition-transform
+                                    ${open ? 'rotate-180' : ''}`}
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                                strokeWidth={2}
+                            >
+                                <path
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    d='M19 9l-7 7-7-7'
+                                />
+                            </svg>
+                        </button>
+                        {open && (
+                            <ul
+                                className='absolute right-0 top-full mt-1 bg-base-100 border
+                                    border-base-300 rounded-box shadow-lg z-50 w-52 max-h-96
+                                    overflow-y-auto p-1'
+                            >
+                                {THEMES.map((t) => (
+                                    <li key={t}>
+                                        <button
+                                            onClick={() => applyTheme(t)}
+                                            className={`w-full flex items-center gap-3 px-3 py-2
+                                            rounded-lg text-sm text-left hover:bg-base-200
+                                            transition-colors
+                                            ${t === theme ? 'font-semibold bg-base-200' : ''}`}
+                                        >
+                                            <span data-theme={t} className='flex gap-0.5 shrink-0'>
+                                                <span className='w-2 h-4 rounded-sm bg-primary' />
+                                                <span className='w-2 h-4 rounded-sm bg-secondary' />
+                                                <span className='w-2 h-4 rounded-sm bg-accent' />
+                                                <span className='w-2 h-4 rounded-sm bg-neutral' />
+                                            </span>
+                                            <span className='capitalize'>{t}</span>
+                                            {t === theme && (
+                                                <svg
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    className='size-4 ml-auto text-primary shrink-0'
+                                                    fill='none'
+                                                    viewBox='0 0 24 24'
+                                                    stroke='currentColor'
+                                                    strokeWidth={2.5}
+                                                >
+                                                    <path
+                                                        strokeLinecap='round'
+                                                        strokeLinejoin='round'
+                                                        d='M5 13l4 4L19 7'
+                                                    />
+                                                </svg>
+                                            )}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                    <a href='/' className='btn btn-ghost btn-sm'>
+                        ← Back
+                    </a>
                 </div>
             </div>
             <main className='mx-auto max-w-5xl px-4 py-8 space-y-6'>

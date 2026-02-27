@@ -39,20 +39,26 @@ import Tooltip from '@mui/material/Tooltip';
 import Divider from '@mui/material/Divider';
 import './mui.css';
 
-/* ── Theme ──────────────────────────────────────── */
-const theme = createTheme({
-    palette: {
-        primary: { main: '#3b82f6' },   // tailwind blue-500
-        secondary: { main: '#f43f5e' }, // tailwind rose-500
-    },
-});
+/* ── Theme presets ──────────────────────────────── */
+const PRESETS = [
+    { id: 'blue-rose',     label: 'Blue / Rose',     primary: '#3b82f6', secondary: '#f43f5e' },
+    { id: 'indigo-pink',   label: 'Indigo / Pink',   primary: '#6366f1', secondary: '#ec4899' },
+    { id: 'teal-orange',   label: 'Teal / Orange',   primary: '#14b8a6', secondary: '#f97316' },
+    { id: 'violet-amber',  label: 'Violet / Amber',  primary: '#8b5cf6', secondary: '#f59e0b' },
+    { id: 'green-red',     label: 'Green / Red',     primary: '#22c55e', secondary: '#ef4444' },
+    { id: 'cyan-blue',     label: 'Cyan / Deep Blue', primary: '#06b6d4', secondary: '#1d4ed8' },
+] as const;
+
+const ModeCtx = React.createContext<'light' | 'dark'>('light');
 
 /* ── Layout helpers ─────────────────────────────── */
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
+    const mode = React.useContext(ModeCtx);
+    const dark = mode === 'dark';
     return (
-        <section className='rounded-xl bg-white border border-gray-100 shadow-sm'>
-            <div className='px-5 py-3 border-b border-gray-100 bg-gray-50 rounded-t-xl'>
-                <h2 className='text-sm font-semibold text-gray-600 uppercase tracking-wide'>{title}</h2>
+        <section className={dark ? 'rounded-xl bg-gray-800 border border-gray-700 shadow-sm' : 'rounded-xl bg-white border border-gray-100 shadow-sm'}>
+            <div className={dark ? 'px-5 py-3 border-b border-gray-700 bg-gray-900/40 rounded-t-xl' : 'px-5 py-3 border-b border-gray-100 bg-gray-50 rounded-t-xl'}>
+                <h2 className={`text-sm font-semibold uppercase tracking-wide ${dark ? 'text-gray-400' : 'text-gray-600'}`}>{title}</h2>
             </div>
             <div className='p-5 space-y-4'>
                 {children}
@@ -531,17 +537,54 @@ function Tooltips() {
 
 /* ── Root ───────────────────────────────────────── */
 function MuiRoot() {
+    const [preset, setPreset] = React.useState<typeof PRESETS[number]>(PRESETS[0]);
+    const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+
+    const theme = React.useMemo(() => createTheme({
+        palette: {
+            mode,
+            primary:   { main: preset.primary },
+            secondary: { main: preset.secondary },
+        },
+    }), [preset, mode]);
+
+    const isDark = mode === 'dark';
+
     return (
+        <ModeCtx.Provider value={mode}>
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <div className='min-h-screen bg-gray-50 text-gray-900 font-sans'>
-                <header className='sticky top-0 z-50 bg-white border-b shadow-sm'>
-                    <div className='mx-auto max-w-5xl px-6 py-3 flex items-center justify-between'>
-                        <div>
+            <div className={isDark ? 'min-h-screen bg-gray-900 text-gray-100 font-sans' : 'min-h-screen bg-gray-50 text-gray-900 font-sans'}>
+                <header className={isDark ? 'sticky top-0 z-50 bg-gray-800 border-b border-gray-700 shadow-sm' : 'sticky top-0 z-50 bg-white border-b shadow-sm'}>
+                    <div className='mx-auto max-w-5xl px-6 py-3 flex items-center gap-4'>
+                        <div className='mr-auto'>
                             <span className='font-bold'>MUI</span>
-                            <span className='ml-2 text-sm text-gray-500'>Material UI v7 · Component Showcase</span>
+                            <span className={`ml-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Material UI v7 · Component Showcase</span>
                         </div>
-                        <a href='/' className='text-sm text-gray-500 hover:text-gray-900 transition-colors'>← Back</a>
+                        {/* Color presets */}
+                        <div className='flex items-center gap-1.5'>
+                            {PRESETS.map((p) => (
+                                <button
+                                    key={p.id}
+                                    title={p.label}
+                                    onClick={() => setPreset(p)}
+                                    className='size-5 rounded-full transition-transform hover:scale-110 focus:outline-none'
+                                    style={{
+                                        background: `linear-gradient(135deg, ${p.primary} 50%, ${p.secondary} 50%)`,
+                                        outline: preset.id === p.id ? `2px solid ${p.primary}` : 'none',
+                                        outlineOffset: '2px',
+                                    }}
+                                />
+                            ))}
+                        </div>
+                        {/* Light / Dark */}
+                        <button
+                            onClick={() => setMode(isDark ? 'light' : 'dark')}
+                            className={`px-3 py-1 text-sm rounded border transition-colors ${isDark ? 'border-gray-600 text-gray-300 hover:bg-gray-700' : 'border-gray-300 text-gray-600 hover:bg-gray-100'}`}
+                        >
+                            {isDark ? '☀ Light' : '☾ Dark'}
+                        </button>
+                        <a href='/' className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-gray-100' : 'text-gray-500 hover:text-gray-900'}`}>← Back</a>
                     </div>
                 </header>
                 <main className='mx-auto max-w-5xl px-6 py-10 space-y-12'>
@@ -561,6 +604,7 @@ function MuiRoot() {
                 </main>
             </div>
         </ThemeProvider>
+        </ModeCtx.Provider>
     );
 }
 
