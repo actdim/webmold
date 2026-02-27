@@ -1,4 +1,12 @@
-@import '../app.css';
-.test {
-    background-color: red;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@plugin 'tailwindcss-animate';
+
+@plugin '@iconify/tailwind4' {
+    /* prefix: iconify; */
+    prefixes: mdi, tabler, material-symbols, ph, devicon, logos, tdesign, vscode-icons;
+    /* scale: 1.2; */
+    /* square: false; */
 }
