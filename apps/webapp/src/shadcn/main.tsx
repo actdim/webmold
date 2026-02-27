@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ShadcnRoot from './shadcn';
+import ShadcnRoot from './ShadcnRoot';
 
 /* https://ui.shadcn.com/themes */
 

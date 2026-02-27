@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TwRoot from './tw';
+import TwRoot from './TwRoot';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<TwRoot />);
