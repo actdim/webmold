@@ -536,7 +536,7 @@ function DropdownTooltip() {
                     <ul tabIndex={0} className='dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow border border-base-300'>
                         <li><a>Profile</a></li>
                         <li><a>Settings</a></li>
-                        <li><hr className='my-1' /></li>
+                        <hr className='my-1 border-base-300' />
                         <li><a className='text-error'>Logout</a></li>
                     </ul>
                 </div>

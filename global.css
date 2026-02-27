@@ -15,7 +15,6 @@ npx @tailwindcss/cli -i ./src/app.css -o ./src/_app.css --watch
 
 @plugin '@tailwindcss/typography';
 
-/* @import 'tw-animate-css'; */
 @plugin 'tailwindcss-animate';
 
 @plugin '@iconify/tailwind4' {

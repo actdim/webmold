@@ -51,6 +51,47 @@ export default function ShadcnRoot() {
     const [sliderVal, setSliderVal] = React.useState([40]);
     const [switchOn, setSwitchOn] = React.useState(false);
     const [checked, setChecked] = React.useState(false);
+    const [pickerDate, setPickerDate] = React.useState<Date | undefined>();
+    const [pickerOpen, setPickerOpen] = React.useState(false);
+    const [dark, setDark] = React.useState(false);
+    const [base, setBase] = React.useState('zinc');
+    const [accent, setAccent] = React.useState('default');
+
+    const toggleDark = () => {
+        const next = !dark;
+        setDark(next);
+        document.documentElement.classList.toggle('dark', next);
+    };
+
+    const selectBase = (b: string) => {
+        setBase(b);
+        if (b === 'zinc') delete document.documentElement.dataset.base;
+        else document.documentElement.dataset.base = b;
+    };
+
+    const selectAccent = (a: string) => {
+        setAccent(a);
+        if (a === 'default') delete document.documentElement.dataset.accent;
+        else document.documentElement.dataset.accent = a;
+    };
+
+    const bases = [
+        { id: 'zinc',    label: 'Zinc'    },
+        { id: 'stone',   label: 'Stone'   },
+        { id: 'neutral', label: 'Neutral' },
+        { id: 'gray',    label: 'Gray'    },
+    ];
+
+    const accents = [
+        { id: 'default', label: 'Default', color: 'oklch(0.21 0.006 285.885)'  },
+        { id: 'blue',    label: 'Blue',    color: 'oklch(0.488 0.243 264.376)' },
+        { id: 'green',   label: 'Green',   color: 'oklch(0.648 0.2 131.684)'   },
+        { id: 'orange',  label: 'Orange',  color: 'oklch(0.646 0.222 41.116)'  },
+        { id: 'red',     label: 'Red',     color: 'oklch(0.577 0.245 27.325)'  },
+        { id: 'rose',    label: 'Rose',    color: 'oklch(0.586 0.253 17.585)'  },
+        { id: 'violet',  label: 'Violet',  color: 'oklch(0.541 0.281 293.009)' },
+        { id: 'yellow',  label: 'Yellow',  color: 'oklch(0.852 0.199 91.936)'  },
+    ];
 
     return (
         <TooltipProvider>
@@ -58,11 +99,46 @@ export default function ShadcnRoot() {
             <div className='min-h-screen bg-background text-foreground'>
                 {/* sticky nav */}
                 <header className='sticky top-0 z-50 bg-background/95 backdrop-blur border-b'>
-                    <div className='max-w-5xl mx-auto px-4 py-2 flex gap-4 text-sm flex-wrap'>
+                    <div className='max-w-5xl mx-auto px-4 py-2 flex gap-4 text-sm flex-wrap items-center'>
                         <span className='font-bold mr-2'>shadcn/ui</span>
                         {['buttons','badges','alerts','form','selection','card','accordion','tabs','overlays','nav','table','feedback','calendar'].map(s => (
                             <a key={s} href={`#${s}`} className='text-muted-foreground hover:text-foreground capitalize'>{s}</a>
                         ))}
+                        <div className='ml-auto flex items-center gap-3'>
+                            {/* Base theme */}
+                            <div className='flex items-center gap-1'>
+                                {bases.map(b => (
+                                    <button
+                                        key={b.id}
+                                        onClick={() => selectBase(b.id)}
+                                        className={`px-2 py-0.5 rounded text-xs transition-colors ${base === b.id ? 'bg-foreground text-background' : 'text-muted-foreground hover:text-foreground'}`}
+                                    >
+                                        {b.label}
+                                    </button>
+                                ))}
+                            </div>
+                            <div className='w-px h-4 bg-border' />
+                            {/* Accent color */}
+                            <div className='flex items-center gap-1.5'>
+                                {accents.map(a => (
+                                    <button
+                                        key={a.id}
+                                        title={a.label}
+                                        onClick={() => selectAccent(a.id)}
+                                        className='size-4 rounded-full transition-transform hover:scale-110'
+                                        style={{
+                                            background: a.color,
+                                            outline: accent === a.id ? `2px solid ${a.color}` : 'none',
+                                            outlineOffset: '2px',
+                                        }}
+                                    />
+                                ))}
+                            </div>
+                            <div className='w-px h-4 bg-border' />
+                            <Button size='sm' variant='outline' onClick={toggleDark}>
+                                {dark ? 'Light' : 'Dark'}
+                            </Button>
+                        </div>
                     </div>
                 </header>
 
@@ -496,6 +572,30 @@ export default function ShadcnRoot() {
                         </div>
                         <div className='text-sm text-muted-foreground pt-2'>
                             Selected: {date ? date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : 'none'}
+                        </div>
+
+                        <div className='flex flex-col gap-1.5'>
+                            <Label>Date picker</Label>
+                            <Popover open={pickerOpen} onOpenChange={setPickerOpen}>
+                                <PopoverTrigger asChild>
+                                    <Button
+                                        variant='outline'
+                                        className={`w-52 justify-start text-left font-normal ${!pickerDate && 'text-muted-foreground'}`}
+                                    >
+                                        <CalendarIcon className='mr-2 size-4' />
+                                        {pickerDate
+                                            ? pickerDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                                            : 'Pick a date'}
+                                    </Button>
+                                </PopoverTrigger>
+                                <PopoverContent className='w-auto p-0' align='start'>
+                                    <Calendar
+                                        mode='single'
+                                        selected={pickerDate}
+                                        onSelect={(d) => { setPickerDate(d); setPickerOpen(false); }}
+                                    />
+                                </PopoverContent>
+                            </Popover>
                         </div>
                     </Section>
 
