@@ -2,7 +2,7 @@
 
 A monorepo sandbox for exploring and comparing popular React UI component libraries, all built on **Tailwind CSS v4** and **React 19**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/actdim/webmold)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/actdim/webmold)
 
 ---
 
