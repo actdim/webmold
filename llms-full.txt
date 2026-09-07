@@ -1,3 +1,11 @@
+# WebMold - Full Documentation Context
+
+> Knowledge Base and documentation index for webmold.
+
+---
+
+## Document: README.md (Overview)
+
 # WebMold
 
 A monorepo sandbox for exploring and comparing popular React UI component libraries, all built on **Tailwind CSS v4** and **React 19**.
@@ -99,3 +107,85 @@ Developed with [Along](https://github.com/actdim/along) - a provider-agnostic co
 ## License
 
 MIT
+
+---
+
+## Document: AGENTS.md (Agent Conventions & Protocol)
+
+<!-- BEGIN ALONG-PROTOCOL ref=../../../AGENTS.md (managed by along-init - do not edit by hand) -->
+This folder belongs to a repository that uses the ALONG structure. The full working
+guidance + agent-context protocol live once in the nearest ancestor `AGENTS.md` (`../../../AGENTS.md`) -
+read it there. This folder keeps its OWN `.along/` state; use the nearest one.
+Only this folder's specifics follow.
+<!-- END ALONG-PROTOCOL -->## Project specifics
+
+<!-- BEGIN ALONG-RULES -->
+See the following engineering guidelines:
+- `[languages/typescript.md](.along/rules/languages/typescript.md)`
+- `[platforms/monorepo.md](.along/rules/platforms/monorepo.md)`
+- `[platforms/web.md](.along/rules/platforms/web.md)`
+<!-- END ALONG-RULES -->
+
+<!-- Fill in: what this project is, how to build / test / run, architecture, conventions. -->
+
+---
+
+## Document: docs/topic--architecture.md (01 Architecture)
+
+# WebMold Architecture
+
+## Overview
+
+**WebMold** is a multi-page web application sandbox and API server exploring and comparing React UI component libraries built on **React 19**, **Tailwind CSS v4**, **Vite v7 MPA**, and **Fastify v5**.
+
+## Monorepo Apps & Structure
+
+- **`apps/webapp/`**: Vite Multi-Page Application (MPA) containing dedicated showcases:
+  - `/tw/`: Tailwind CSS + HyperUI HTML/CSS components.
+  - `/shadcn/`: shadcn/ui (Radix UI) showcase with two-tier theme switcher (4 base x 8 accent colors) + dark mode.
+  - `/mui/`: Material UI v7 showcase with 6 color presets.
+  - `/prime/`: PrimeReact v10 showcase (DataTable, Form controls, Sliders, Accordion).
+  - `/daisy/`: DaisyUI v5 showcase with 35 built-in theme switchers.
+- **`apps/server/`**: Fastify v5 API server with TypeBox schema validation.
+
+---
+
+## Document: docs/topic--domain-model.md (02 Domain Model)
+
+# WebMold Domain Model
+
+## Core Concepts & Showcases
+
+- **Vite MPA Showcase**: Dedicated entry-point page (`index.html`) per UI component library.
+- **UI Library Showcases**:
+  - `shadcn`: Radix UI primitives with CSS variable themes.
+  - `mui`: Material UI v7 component theme provider setup.
+  - `prime`: PrimeReact v10 widgets and data table components.
+  - `daisy`: DaisyUI v5 CSS class-based components.
+  - `tw`: Pure Tailwind CSS + HyperUI component snippets.
+- **Fastify API Server**: Backend API endpoints with TypeBox request/response schemas.
+
+---
+
+## Document: docs/topic--setup-and-workflow.md (03 Setup And Workflow)
+
+# WebMold Setup and Workflow
+
+## Installation
+
+```bash
+pnpm install
+```
+
+## Development Commands
+
+```bash
+# Run webapp only (port 5174)
+pnpm dev:webapp
+
+# Run Fastify server only (port 3000)
+pnpm dev:server
+
+# Run webapp + server concurrently
+pnpm dev
+```

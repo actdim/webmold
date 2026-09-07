@@ -1,10 +1,11 @@
 ---
 protocol: along
-slug: 01-architecture
+protocol_version: "2.2.5"
+slug: architecture
 title: System Architecture & Flow
 type: architecture
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-02
 tags: [architecture]
 ---
 

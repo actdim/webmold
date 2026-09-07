@@ -1,7 +1,7 @@
 {
     "name": "webmold",
     "private": true,
-    "version": "0.0.1",
+    "version": "1.5.14",
     "type": "module",
     "packageManager": "pnpm@10.30.3",
     "scripts": {
@@ -11,7 +11,6 @@
         "dev": "concurrently \"pnpm run dev:server\" \"pnpm run dev:webapp\"",
         "dev:a-p": "npm-run-all -p dev:server dev:web",
         "dev:a-s": "npm-run-all -s dev:server dev:web",
-        "build": "tsc -b && vite build",
         "pnpm:u": "pnpm update",
         "pnpm:ou": "pnpm outdated",
         "ncu:l": "ncu",

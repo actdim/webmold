@@ -1,0 +1,23 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "composite": true,
+        "noEmit": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "declarationMap": true,
+        "declarationDir": "./dist",
+        "outDir": "./dist",
+        "sourceMap": false,
+        "types": ["node", "vite/client"]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.json",
+        "tests/**/*.ts",
+        "src/styles.d.ts_"
+    ],
+    "exclude": ["**/*.stories.tsx", "**/*.fixture.tsx", "dist", "node-modules", "postcss.ts"]
+}
+

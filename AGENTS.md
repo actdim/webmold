@@ -3,8 +3,13 @@ This folder belongs to a repository that uses the ALONG structure. The full work
 guidance + agent-context protocol live once in the nearest ancestor `AGENTS.md` (`../../../AGENTS.md`) -
 read it there. This folder keeps its OWN `.along/` state; use the nearest one.
 Only this folder's specifics follow.
-<!-- END ALONG-PROTOCOL -->
+<!-- END ALONG-PROTOCOL -->## Project specifics
 
-## Project specifics
+<!-- BEGIN ALONG-RULES -->
+See the following engineering guidelines:
+- `[languages/typescript.md](.along/rules/languages/typescript.md)`
+- `[platforms/monorepo.md](.along/rules/platforms/monorepo.md)`
+- `[platforms/web.md](.along/rules/platforms/web.md)`
+<!-- END ALONG-RULES -->
 
 <!-- Fill in: what this project is, how to build / test / run, architecture, conventions. -->

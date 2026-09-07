@@ -1,18 +1,4 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "composite": true,
-        "moduleResolution": "node",
-        "module": "esnext",
-        "types": ["node"],
-        "declarationDir": "./dist",
-        "baseUrl": ".",
-        "rootDir": ".", // "src"
-        "outDir": "./dist",
-        "paths": {
-            "@/*": ["src/*"]
-        }
-    },
-    "include": ["src/**/*.ts", "src/**/*.json", "tests/**/*.ts"],
-    "exclude": ["dist", "node-modules"]
+    "files": [],
+    "references": [{ "path": "./tsconfig.build.json" }, { "path": "./tsconfig.dev.json" }]
 }
