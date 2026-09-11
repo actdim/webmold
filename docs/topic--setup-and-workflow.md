@@ -1,6 +1,5 @@
 ---
 protocol: along
-protocol_version: "2.2.5"
 slug: setup-and-workflow
 title: 03 Setup And Workflow
 type: topic

@@ -1,6 +1,5 @@
 ---
 protocol: along
-protocol_version: "2.2.5"
 slug: architecture
 title: 01 Architecture
 type: topic

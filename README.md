@@ -10,29 +10,29 @@ A monorepo sandbox for exploring and comparing popular React UI component librar
 
 | App | Description |
 |-----|-------------|
-| `apps/webapp` | Multi-page React app — one page per UI library |
+| `apps/webapp` | Multi-page React app - one page per UI library |
 | `apps/server` | Fastify API server (TypeScript) |
 
 ### UI library pages
 
 | Page | Library | Highlights |
 |------|---------|------------|
-| `/tw/` | **Tailwind CSS + HyperUI** | Pure Tailwind — badges, button groups, inputs, tabs, stats, table, pagination, steps |
+| `/tw/` | **Tailwind CSS + HyperUI** | Pure Tailwind - badges, button groups, inputs, tabs, stats, table, pagination, steps |
 | `/shadcn/` | **shadcn/ui** | Full component showcase + two-tier theme switcher (4 base × 8 accent colors) + dark mode |
 | `/mui/` | **Material UI v7** | Component showcase + 6 color presets + light/dark toggle |
-| `/prime/` | **PrimeReact v10** | Component showcase — buttons, inputs, sliders, rating, tags, progress, accordion, DataTable |
+| `/prime/` | **PrimeReact v10** | Component showcase - buttons, inputs, sliders, rating, tags, progress, accordion, DataTable |
 | `/daisy/` | **DaisyUI v5** | Component showcase + switcher for all 35 built-in themes |
 
 ---
 
 ## Tech stack
 
-- **Monorepo** — [pnpm workspaces](https://pnpm.io/workspaces) v10
-- **Bundler** — [Vite](https://vitejs.dev/) v7, MPA mode (separate `index.html` per page)
-- **Language** — TypeScript 5
-- **UI** — React 19
-- **Styles** — Tailwind CSS v4 (`@tailwindcss/vite`)
-- **Server** — Fastify v5 with TypeBox schema validation
+- **Monorepo** - [pnpm workspaces](https://pnpm.io/workspaces) v10
+- **Bundler** - [Vite](https://vitejs.dev/) v7, MPA mode (separate `index.html` per page)
+- **Language** - TypeScript 5
+- **UI** - React 19
+- **Styles** - Tailwind CSS v4 (`@tailwindcss/vite`)
+- **Server** - Fastify v5 with TypeBox schema validation
 
 ### UI libraries
 
@@ -70,7 +70,7 @@ pnpm dev
 webmold/
 ├── apps/
 │   ├── webapp/               # Vite MPA
-│   │   ├── index.html        # / — library index page
+│   │   ├── index.html        # / - library index page
 │   │   ├── tw/index.html     # /tw/
 │   │   ├── shadcn/index.html # /shadcn/
 │   │   ├── mui/index.html    # /mui/

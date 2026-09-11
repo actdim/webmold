@@ -1,6 +1,5 @@
 ---
 protocol: along
-protocol_version: "2.2.5"
 slug: domain-model
 title: 02 Domain Model
 type: topic
