@@ -1,14 +1,14 @@
 ---
 protocol: along
 slug: INDEX
-title: Knowledge Base Topic Index
+title: WebMold - Knowledge Base Topic Index
 type: index
 created: 2026-09-07
-updated: 2026-09-11
+updated: 2026-09-27
 tags: [index, kb, topics, map]
 ---
 
-# Knowledge Base Topic Index
+# WebMold - Knowledge Base Topic Index
 
 Central entry point and cross-linked topic catalog for project documentation:
 
@@ -19,6 +19,8 @@ flowchart TD
     INDEX["Knowledge Base (INDEX)"]
     T_ARCHITECTURE["01 Architecture"]
     INDEX --> T_ARCHITECTURE
+    T_DEPENDENCIES["Dependencies & AI Documentation for webmold"]
+    INDEX --> T_DEPENDENCIES
     T_DOMAIN_MODEL["02 Domain Model"]
     INDEX --> T_DOMAIN_MODEL
     T_SETUP_AND_WORKFLOW["03 Setup And Workflow"]
@@ -30,6 +32,7 @@ flowchart TD
 ## Articles
 
 - **[01 Architecture](./topic--architecture.md)** (topic) `architecture`
+- **[Dependencies & AI Documentation for webmold](./topic--dependencies.md)** (topic) `dependencies`, `subproject`, `ai-context`, `rules`
 - **[02 Domain Model](./topic--domain-model.md)** (topic) `domain-model`
 - **[03 Setup And Workflow](./topic--setup-and-workflow.md)** (topic) `setup-and-workflow`
 
@@ -39,5 +42,4 @@ flowchart TD
 
 - [AGENTS.md](../AGENTS.md): Active protocol conventions and rules.
 - [.along/DECISIONS.md](../.along/DECISIONS.md): Architectural Decision Records.
-- [.along/ISSUES.md](../.along/ISSUES.md): Active issue tracking board.
-- [.along/HISTORY.md](../.along/HISTORY.md): Append-only project history log.
+- [Domain Model & Entity Ecosystem](./topic--domain-model.md): Specifications for active issues and project history.

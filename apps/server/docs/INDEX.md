@@ -1,14 +1,14 @@
 ---
 protocol: along
 slug: INDEX
-title: Knowledge Base Topic Index
+title: server - Knowledge Base Topic Index
 type: index
 created: 2026-09-07
-updated: 2026-09-11
+updated: 2026-09-27
 tags: [index, kb, topics, map]
 ---
 
-# Knowledge Base Topic Index
+# server - Knowledge Base Topic Index
 
 Central entry point and cross-linked topic catalog for project documentation:
 
@@ -39,5 +39,4 @@ flowchart TD
 
 - [AGENTS.md](../AGENTS.md): Active protocol conventions and rules.
 - [.along/DECISIONS.md](../.along/DECISIONS.md): Architectural Decision Records.
-- [.along/ISSUES.md](../.along/ISSUES.md): Active issue tracking board.
-- [.along/HISTORY.md](../.along/HISTORY.md): Append-only project history log.
+- [Domain Model & Entity Ecosystem](./topic--domain-model.md): Specifications for active issues and project history.

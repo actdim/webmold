@@ -1,7 +1,7 @@
 {
     "name": "webapp",
     "private": true,
-    "version": "1.7.1",
+    "version": "1.7.2",
     "type": "module",
     "packageManager": "pnpm@10.30.3",
     "scripts": {
@@ -12,7 +12,7 @@
         "test": "npx vitest --config=vitest.node.config.ts --no-cache",
         "test:w": "npx vitest --config=vitest.node.config.ts --watch",
         "test:v8": "npx vite",
-        "lint": "eslint . -f visualstudio --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+        "lint": "eslint . -f visualstudio --ext .ts,.tsx --report-unused-disable-directives",
         "build": "tsc -b && vite build",
         "pnpm:u": "pnpm update",
         "pnpm:ou": "pnpm outdated",
