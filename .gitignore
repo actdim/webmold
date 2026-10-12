@@ -141,3 +141,6 @@ storybook-static
 # Python bytecode cache (Along lifecycle scripts)
 __pycache__/
 *.pyc
+
+# Along session-scoped blackboards
+.along/.session/
