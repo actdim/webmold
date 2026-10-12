@@ -19,7 +19,7 @@ pnpm install
 ## Development Commands
 
 ```bash
-# Run webapp only (port 5174)
+# Run webapp only (port 5173)
 pnpm dev:webapp
 
 # Run Fastify server only (port 3000)

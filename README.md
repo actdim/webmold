@@ -52,7 +52,7 @@ A monorepo sandbox for exploring and comparing popular React UI component librar
 # Install dependencies
 pnpm install
 
-# Run webapp only (port 5174)
+# Run webapp only (port 5173)
 pnpm dev:webapp
 
 # Run server only (port 3000)
