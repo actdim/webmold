@@ -47,6 +47,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 /* ── Buttons ────────────────────────────────────── */
 function Buttons() {
     const [loading, setLoading] = React.useState(false);
+
     return (
         <Section title='Buttons'>
             {/* severity */}
@@ -120,6 +121,7 @@ function Inputs() {
         { label: 'Editor', value: 'editor' },
         { label: 'Viewer', value: 'viewer' },
     ];
+
     return (
         <Section title='Inputs'>
             <div className='flex flex-wrap gap-5 items-start'>
@@ -236,6 +238,7 @@ function SliderRating() {
     const [val, setVal] = React.useState(40);
     const [range, setRange] = React.useState<[number, number]>([20, 70]);
     const [stars, setStars] = React.useState<number | undefined>(3);
+
     return (
         <Section title='Slider & Rating'>
             <div className='flex flex-wrap gap-10'>
@@ -279,6 +282,7 @@ function SliderRating() {
 /* ── Tags & Chips ───────────────────────────────── */
 function TagsChips() {
     const [tags, setTags] = React.useState<string[]>(['React', 'TypeScript', 'Tailwind']);
+
     return (
         <Section title='Tags & Chips'>
             {/* Tag — badge-like */}
@@ -332,8 +336,10 @@ function Progress() {
     const [val, setVal] = React.useState(0);
     React.useEffect(() => {
         const t = setInterval(() => setVal((p) => (p >= 100 ? 0 : p + 5)), 400);
+
         return () => clearInterval(t);
     }, []);
+
     return (
         <Section title='Progress'>
             <div className='flex flex-col gap-5 max-w-sm'>
@@ -377,6 +383,7 @@ function Avatars() {
         { label: 'D', style: { backgroundColor: '#f59e0b', color: '#fff' } },
         { label: 'E', style: { backgroundColor: '#8b5cf6', color: '#fff' } },
     ];
+
     return (
         <Section title='Avatars & Badges'>
             <div className='flex flex-wrap gap-6 items-center'>

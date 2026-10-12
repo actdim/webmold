@@ -56,6 +56,7 @@ function ButtonGroups() {
     // to collapse double borders. NO overflow-hidden, NO border-r-0.
     const base = 'border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none';
     const iconBase = 'border border-gray-200 p-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none';
+
     return (
         <Section title='Button Groups'>
             <div className='flex flex-wrap gap-4'>
@@ -219,6 +220,7 @@ function Tabs() {
         'Choose what events you want to be notified about and how.',
         'Configure two-factor authentication and active sessions.',
     ];
+
     return (
         <Section title='Tabs'>
             <div className='w-full max-w-xl'>
@@ -230,8 +232,8 @@ function Tabs() {
                                 onClick={() => setActive(i)}
                                 className={`border-b-2 px-4 py-2 text-sm font-medium transition-colors
                                     ${active === i
-                                        ? 'border-blue-600 text-blue-600'
-                                        : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+                                    ? 'border-blue-600 text-blue-600'
+                                    : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
                                 {tab}
                             </button>
                         ))}
@@ -263,6 +265,7 @@ function Stats() {
         { label: 'New Signups', value: '+12,234', change: '+19%', up: true, icon: '📈' },
         { label: 'Churn Rate', value: '3.2%', change: '+0.4%', up: false, icon: '⚠️' },
     ];
+
     return (
         <Section title='Stats'>
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl'>
@@ -298,6 +301,7 @@ function DataTable() {
         { name: 'Colin Robinson', dob: '01/09/1971', role: 'Energy Vampire', salary: '$53,000' },
         { name: 'Guillermo de la Cruz', dob: '18/11/1991', role: 'Familiar / Hunter', salary: '$0' },
     ];
+
     return (
         <Section title='Table'>
             <div className='overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm max-w-3xl'>
@@ -329,6 +333,7 @@ function DataTable() {
 function Pagination() {
     const [page, setPage] = React.useState(2);
     const total = 6;
+
     return (
         <Section title='Pagination'>
             <div className='flex flex-wrap gap-6 items-center'>
@@ -391,6 +396,7 @@ function ProgressBars() {
         { label: 'CPU load', value: 90, color: 'bg-red-500' },
         { label: 'Memory', value: 55, color: 'bg-yellow-400' },
     ];
+
     return (
         <Section title='Progress Bars'>
             <div className='flex flex-col gap-4 max-w-sm'>
@@ -464,6 +470,7 @@ function Steps() {
         { label: 'Payment', desc: 'Card details', active: true },
         { label: 'Confirm', desc: 'Review your order', done: false },
     ];
+
     return (
         <Section title='Steps'>
             <ol className='flex items-center gap-0 max-w-xl'>

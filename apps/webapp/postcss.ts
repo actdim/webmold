@@ -91,6 +91,7 @@ function getCssFiles(dir: string): string[] {
             results.push(filePath);
         }
     });
+
     return results;
 }
 

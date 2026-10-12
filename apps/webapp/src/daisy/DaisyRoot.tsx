@@ -470,6 +470,7 @@ function FormControls() {
 /* ── Tabs ───────────────────────────────────────── */
 function TabsSection() {
     const [active, setActive] = React.useState(0);
+
     return (
         <Section title='Tabs'>
             <div className='flex flex-col gap-6'>
@@ -564,6 +565,7 @@ function TableSection() {
         { name: 'Brice Swyre', job: 'Tax Accountant', fav: 'Red' },
         { name: 'Marjy Ferencz', job: 'Office Assistant', fav: 'Crimson' },
     ];
+
     return (
         <Section title='Table'>
             <div className='overflow-x-auto'>
@@ -822,6 +824,7 @@ function DropdownTooltip() {
 /* ── Modal ──────────────────────────────────────── */
 function ModalSection() {
     const modalRef = React.useRef<HTMLDialogElement>(null);
+
     return (
         <Section title='Modal'>
             <div className='flex gap-3 flex-wrap'>
@@ -1004,6 +1007,7 @@ export default function DaisyRoot() {
             }
         };
         document.addEventListener('mousedown', handler);
+
         return () => document.removeEventListener('mousedown', handler);
     }, []);
 

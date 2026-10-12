@@ -55,6 +55,7 @@ const ModeCtx = React.createContext<'light' | 'dark'>('light');
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
     const mode = React.useContext(ModeCtx);
     const dark = mode === 'dark';
+
     return (
         <section className={dark ? 'rounded-xl bg-gray-800 border border-gray-700 shadow-sm' : 'rounded-xl bg-white border border-gray-100 shadow-sm'}>
             <div className={dark ? 'px-5 py-3 border-b border-gray-700 bg-gray-900/40 rounded-t-xl' : 'px-5 py-3 border-b border-gray-100 bg-gray-50 rounded-t-xl'}>
@@ -160,6 +161,7 @@ function TextFields() {
 /* ── Form Controls ──────────────────────────────── */
 function FormControls() {
     const [radio, setRadio] = React.useState('email');
+
     return (
         <Section title='Checkboxes, Radio & Switch'>
             <div className='flex flex-wrap gap-10'>
@@ -202,6 +204,7 @@ function FormControls() {
 function Sliders() {
     const [val, setVal] = React.useState<number>(40);
     const [range, setRange] = React.useState<number[]>([20, 80]);
+
     return (
         <Section title='Slider'>
             <div className='max-w-sm space-y-6'>
@@ -230,6 +233,7 @@ function Sliders() {
 /* ── Rating ─────────────────────────────────────── */
 function Ratings() {
     const [value, setValue] = React.useState<number | null>(3);
+
     return (
         <Section title='Rating'>
             <div className='flex flex-wrap gap-8 items-center'>
@@ -261,6 +265,7 @@ function Ratings() {
 /* ── Chips ──────────────────────────────────────── */
 function Chips() {
     const [chips, setChips] = React.useState(['React', 'TypeScript', 'Tailwind', 'MUI']);
+
     return (
         <Section title='Chips'>
             <div className='flex flex-wrap gap-3'>
@@ -318,6 +323,7 @@ function Progress() {
         const timer = setInterval(() => {
             setProgress((p) => (p >= 100 ? 0 : p + 5));
         }, 400);
+
         return () => clearInterval(timer);
     }, []);
 
@@ -363,6 +369,7 @@ function Progress() {
 function Avatars() {
     const colors = ['#3b82f6', '#f43f5e', '#10b981', '#f59e0b', '#8b5cf6'];
     const names = ['Alice', 'Bob', 'Carol', 'Dave', 'Eve'];
+
     return (
         <Section title='Avatars & Badges'>
             <div className='flex flex-wrap gap-6 items-center'>
@@ -414,6 +421,7 @@ function MuiTabs() {
         'Configure two-factor authentication and active sessions.',
         'Choose what events you want to be notified about and how.',
     ];
+
     return (
         <Section title='Tabs'>
             <div className='max-w-xl'>
@@ -481,6 +489,7 @@ function DataTable() {
         { name: 'Guillermo de la Cruz', role: 'Familiar / Hunter', status: 'Inactive', since: 1991 },
     ];
     const statusColor = (s: string) => s === 'Active' ? 'success' : 'error';
+
     return (
         <Section title='Table'>
             <TableContainer component={Paper} sx={{ maxWidth: 700 }} variant='outlined'>
@@ -514,6 +523,7 @@ function DataTable() {
 /* ── Tooltips ───────────────────────────────────── */
 function Tooltips() {
     const placements = ['top', 'right', 'bottom', 'left'] as const;
+
     return (
         <Section title='Tooltips'>
             <div className='flex flex-wrap gap-4 items-center'>
@@ -552,19 +562,19 @@ function MuiRoot() {
 
     return (
         <ModeCtx.Provider value={mode}>
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <div className={isDark ? 'min-h-screen bg-gray-900 text-gray-100 font-sans' : 'min-h-screen bg-gray-50 text-gray-900 font-sans'}>
-                <header className={isDark ? 'sticky top-0 z-50 bg-gray-800 border-b border-gray-700 shadow-sm' : 'sticky top-0 z-50 bg-white border-b shadow-sm'}>
-                    <div className='mx-auto max-w-5xl px-6 py-3 flex items-center gap-4'>
-                        <div className='mr-auto'>
-                            <span className='font-bold'>MUI</span>
-                            <span className={`ml-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Material UI v7 · Component Showcase</span>
-                        </div>
-                        {/* Color presets */}
-                        <div className='flex items-center gap-1.5'>
-                            {PRESETS.map((p) => (
-                                <button
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <div className={isDark ? 'min-h-screen bg-gray-900 text-gray-100 font-sans' : 'min-h-screen bg-gray-50 text-gray-900 font-sans'}>
+                    <header className={isDark ? 'sticky top-0 z-50 bg-gray-800 border-b border-gray-700 shadow-sm' : 'sticky top-0 z-50 bg-white border-b shadow-sm'}>
+                        <div className='mx-auto max-w-5xl px-6 py-3 flex items-center gap-4'>
+                            <div className='mr-auto'>
+                                <span className='font-bold'>MUI</span>
+                                <span className={`ml-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Material UI v7 · Component Showcase</span>
+                            </div>
+                            {/* Color presets */}
+                            <div className='flex items-center gap-1.5'>
+                                {PRESETS.map((p) => (
+                                    <button
                                     key={p.id}
                                     title={p.label}
                                     onClick={() => setPreset(p)}
@@ -574,36 +584,36 @@ function MuiRoot() {
                                         outline: preset.id === p.id ? `2px solid ${p.primary}` : 'none',
                                         outlineOffset: '2px',
                                     }}
-                                />
-                            ))}
-                        </div>
-                        {/* Light / Dark */}
-                        <button
+                                    />
+                                ))}
+                            </div>
+                            {/* Light / Dark */}
+                            <button
                             onClick={() => setMode(isDark ? 'light' : 'dark')}
                             className={`px-3 py-1 text-sm rounded border transition-colors ${isDark ? 'border-gray-600 text-gray-300 hover:bg-gray-700' : 'border-gray-300 text-gray-600 hover:bg-gray-100'}`}
-                        >
-                            {isDark ? '☀ Light' : '☾ Dark'}
-                        </button>
-                        <a href='/' className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-gray-100' : 'text-gray-500 hover:text-gray-900'}`}>← Back</a>
-                    </div>
-                </header>
-                <main className='mx-auto max-w-5xl px-6 py-10 space-y-12'>
-                    <Buttons />
-                    <TextFields />
-                    <FormControls />
-                    <Sliders />
-                    <Ratings />
-                    <Chips />
-                    <Alerts />
-                    <Progress />
-                    <Avatars />
-                    <MuiTabs />
-                    <Accordions />
-                    <DataTable />
-                    <Tooltips />
-                </main>
-            </div>
-        </ThemeProvider>
+                            >
+                                {isDark ? '☀ Light' : '☾ Dark'}
+                            </button>
+                            <a href='/' className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-gray-100' : 'text-gray-500 hover:text-gray-900'}`}>← Back</a>
+                        </div>
+                    </header>
+                    <main className='mx-auto max-w-5xl px-6 py-10 space-y-12'>
+                        <Buttons />
+                        <TextFields />
+                        <FormControls />
+                        <Sliders />
+                        <Ratings />
+                        <Chips />
+                        <Alerts />
+                        <Progress />
+                        <Avatars />
+                        <MuiTabs />
+                        <Accordions />
+                        <DataTable />
+                        <Tooltips />
+                    </main>
+                </div>
+            </ThemeProvider>
         </ModeCtx.Provider>
     );
 }

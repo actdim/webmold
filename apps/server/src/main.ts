@@ -79,6 +79,7 @@ fastify.register(
             },
             async (request: FastifyRequest<{ Params: NamedObject }>, reply: FastifyReply) => {
                 const { name } = request.params;
+
                 return { message: `Hello, ${name}!` };
             }
         );
@@ -115,6 +116,7 @@ fastify.register(
                 if (typeof a !== 'number' || typeof b !== 'number') {
                     return reply.status(400).send({ error: 'a и b должны быть числами' });
                 }
+
                 return { result: a + b };
             }
         );
