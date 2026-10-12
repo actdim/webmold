@@ -1,0 +1,8 @@
+{
+  "verify": {
+    "tests": "none",
+    "reason": "no test suite yet",
+    "tracked_by": "debt--add-tests",
+    "checks": ["lint"]
+  }
+}
