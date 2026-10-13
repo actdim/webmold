@@ -2,6 +2,11 @@
 
 All notable changes to `webmold` are documented here. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.8.3] - 2026-10-13
+
+### Changed
+- Bump patch version to 1.8.3, synchronize workspace dependencies and Along protocol v4.4.12 metadata.
+
 ## [1.8.0] - 2026-10-01
 
 Commit `e073784`.
