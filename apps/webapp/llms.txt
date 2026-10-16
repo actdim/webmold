@@ -5,5 +5,6 @@
 ## Documentation Links
 - [docs/INDEX.md](docs/INDEX.md): Central Knowledge Base topic catalog.
 - [docs/topic--architecture.md](docs/topic--architecture.md): System Architecture & Flow.
+- [docs/topic--dependencies.md](docs/topic--dependencies.md): Dependencies & AI Documentation for webapp.
 - [docs/topic--domain-model.md](docs/topic--domain-model.md): Domain Model & Entities.
 - [docs/topic--setup-and-workflow.md](docs/topic--setup-and-workflow.md): Setup & Developer Workflow.

@@ -19,6 +19,8 @@ flowchart TD
     INDEX["Knowledge Base (INDEX)"]
     T_ARCHITECTURE["System Architecture & Flow"]
     INDEX --> T_ARCHITECTURE
+    T_DEPENDENCIES["Dependencies & AI Documentation for server"]
+    INDEX --> T_DEPENDENCIES
     T_DOMAIN_MODEL["Domain Model & Entities"]
     INDEX --> T_DOMAIN_MODEL
     T_SETUP_AND_WORKFLOW["Setup & Developer Workflow"]
@@ -30,6 +32,7 @@ flowchart TD
 ## Articles
 
 - **[System Architecture & Flow](./topic--architecture.md)** (architecture) `architecture`
+- **[Dependencies & AI Documentation for server](./topic--dependencies.md)** (topic) `dependencies`, `subproject`, `ai-context`, `rules`
 - **[Domain Model & Entities](./topic--domain-model.md)** (domain-model) `domain-model`
 - **[Setup & Developer Workflow](./topic--setup-and-workflow.md)** (setup-workflow) `setup-workflow`
 
