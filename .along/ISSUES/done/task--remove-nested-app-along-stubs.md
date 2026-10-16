@@ -16,8 +16,15 @@ related: []
 
 # Remove unused nested .along stubs in apps/server and apps/webapp
 
-Describe the feature, requirements, and background context here.
+## Problem Statement / Background
+Legacy nested .along directories inside apps/server and apps/webapp were causing Along protocol boundary conflicts.
+
+## Implementation Details
+1. Removed obsolete nested .along directories from apps/server and apps/webapp.
+2. Consolidated agent context under nearest package/workspace root .along.
+3. Verified Along subproject boundary resolution.
 
 ## Acceptance Criteria
-- [ ] Task requirement 1
-- [ ] Automated tests passing
+- [x] Nested .along folders removed from apps/server and apps/webapp
+- [x] Along CLI resolves nearest boundary cleanly
+- [x] No orphan entity references remaining
