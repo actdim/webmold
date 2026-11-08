@@ -2,6 +2,12 @@
 
 All notable changes to `webmold` are documented here. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.14.0] - 2026-11-08
+
+### Changed
+- Synchronized knowledge base indices and llms manifests (`#docs-ci-pages-parity`).
+- Synchronized workspace dependencies to `>=1.14.0`.
+
 ## [1.8.3] - 2026-10-13
 
 ### Changed
